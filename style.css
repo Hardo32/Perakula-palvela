@@ -1,0 +1,173 @@
+/* new Font- style. source-sans-3-regular - latin. Tõmmata file google-webfonts-helper.(regular,700)*/
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/source-sans-3-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* source-sans-3-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/source-sans-3-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/*Fonts sizes - fs*/
+:root {
+  --fs-14: calc(14 / 16 * 1rem);
+  --fs-16: calc(16 / 16 * 1rem);
+  --fs-24: calc(24 / 16 * 1rem);
+  --fs-36: calc(36 / 16 * 1rem);
+  --fs-42: calc(42 / 16 * 1rem);
+  --fs-48: calc(48 / 16 * 1rem);
+  --fs-72: calc(72 / 16 * 1rem);
+
+  /*Mobiilis elementide teksti suurused siin määratud*/
+  --font-size-topnav: var(--fs-14);
+  --font-size-h1: var(--fs-42);
+  --font-size-h2: var(--fs-36);
+  --font-size-h3: var(--fs-24);
+
+  /*suuremal seadmel- arvuti, tablet, mille laius ületab 600px,teksti suurus teine-suurem*/
+  @media (width >= calc(600/16*1rem)) {
+    --font-size-topnav: var(--fs-16);
+    --font-size-h1: var(--fs-72);
+    --font-size-h2: var(--fs-48);
+  }
+}
+/*Style layout rules*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} /*piirid ei ületaks laiust pikkust*/
+* {
+  margin: 0;
+} /* css reset type rule*/
+
+/*Selectors Global styles*/
+body {
+  font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+  background-color: rgb(130, 70, 60);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1; /* rea kõrgus-110% font size*/
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+h2 {
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-size: var(--font-size-h3);
+}
+a {
+  text-decoration: none;
+} /*(anchor tag-is)eemaldab linkidelt default underline*/
+img,
+picture,
+svg {
+  max-width: 100%; /*välistab full size image horizontal scrollimist, need ei lähe suuremaks kui parent*/
+  height: auto;
+  display: block; /*parem paigutus*/
+}
+
+.wrapper {
+  width: min(
+    calc(100% - 48px),
+    calc(1200 / 16 * 1rem)
+  ); /*venitamisel 327px Mobile width ja 1200px-maximum PC width*/
+  margin-inline: auto; /*tsentreerib, nii et mõlemalt poolt ühesugune kaugus max laiuseni */
+}
+
+.topnav {
+  color: white;
+  /* border-style: solid; */
+  border-bottom-style: inset;
+  border-top: 0cap;
+  border-left: 0cap;
+  border-right: 0cap;
+  border-color: darkgoldenrod;
+
+  .topnav__wrapper:hover img {
+    -webkit-filter: brightness(70%);
+    transform: scale(1.1);
+  }
+  .topnav__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 12px;
+
+    @media (width >= calc(600/16*1rem)) {
+      padding-block: 20px;
+    }
+  }
+  .topnav__logo {
+    width: calc(12 / 16 * 1rem);
+    @media (width >= calc(600/16*1rem)) {
+      width: calc(40 / 16 * 1rem);
+    }
+  }
+  .topnav__logo2 {
+    width: calc(54 / 16 * 1rem);
+    @media (width >= calc(600/16*1rem)) {
+      width: calc(132 / 16 * 1rem);
+    }
+  }
+  .topnav__links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+
+    @media (width >= calc(600/16*1rem)) {
+      gap: 40px;
+    }
+  }
+  .topnav__link {
+    font-size: var(--font-size-topnav);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--c-white);
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 7px;
+      text-decoration-thickness: 3px;
+    }
+  }
+  background-color: rgb(120, 70, 60);
+}
+
+.main {
+  .galery {
+    /* width: 100; */
+
+    text-align: center;
+    border-style: outset;
+    border-radius: 5cap;
+    border-color: bisque;
+
+    /* padding-block: 20px; */
+    background-color: rgb(200, 140, 75);
+    color: lightblue;
+
+    .galery__img {
+      /* width: calc(400 / 16 * 1rem);
+      @media (width >= calc(400/16*1rem)) {
+        width: calc(1200 / 16 * 1rem);
+      } */
+      border-radius: 5cap;
+      vertical-align: middle;
+    }
+  }
+}
