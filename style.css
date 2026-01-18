@@ -22,13 +22,14 @@
   --fs-20: calc(20 / 16 * 1rem);
   --fs-24: calc(24 / 16 * 1rem);
   --fs-26: calc(26 / 16 * 1rem);
-  --fs-36: calc(36 / 16 * 1rem);
   --fs-42: calc(42 / 16 * 1rem);
   --fs-48: calc(48 / 16 * 1rem);
   --fs-72: calc(72 / 16 * 1rem);
 
   /*Mobiilis elementide teksti suurused siin määratud*/
   --font-size-topnav: var(--fs-10);
+  --font-size-btn: var(--fs-16);
+  --font-size-small: var(--fs-16);
   --font-size-h1: var(--fs-42);
   --font-size-h2: var(--fs-26);
   --font-size-h3: var(--fs-20);
@@ -36,6 +37,8 @@
   /*suuremal seadmel- arvuti, tablet, mille laius ületab 600px,teksti suurus teine-suurem*/
   @media (width >= calc(600/16*1rem)) {
     --font-size-topnav: var(--fs-18);
+    --font-size-small: var(--fs-18);
+    --font-size-btn: var(--fs-24);
     --font-size-h1: var(--fs-72);
     --font-size-h2: var(--fs-48);
   }
@@ -68,13 +71,17 @@ h1 {
   text-align: center;
 }
 h2 {
-  color: lightskyblue;
+  color: beige;
   font-size: var(--font-size-h2);
   text-align: center;
 }
 h3 {
   /* font-size: var(--font-size-h3); */
   text-align: center;
+}
+p,
+strong {
+  font-size: var(--font-size-small);
 }
 a {
   text-decoration: none;
@@ -158,7 +165,7 @@ svg {
   border-style: outset;
   border-radius: 5cap;
   border-color: bisque;
-  background-color: rgb(200, 140, 75);
+  background: linear-gradient(315deg, #574619, #bd8216);
   color: lightblue;
 }
 .mainImg img {
@@ -198,25 +205,114 @@ svg {
   padding-top: 10px;
   border: 1px solid rgb(200, 140, 75);
   display: flex;
-  justify-content: center;
+  gap: 7px;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.intro a {
+  background-color: aliceblue;
+  opacity: 50%;
+  padding: 5px;
+  border: 2px groove lightgray;
+  font-size: var(--font-size-btn);
+  &:hover {
+    opacity: 100%;
+  }
 }
 .historyImg {
   width: 20%;
 }
 .galery {
   display: flex;
-  justify-content: center;
-  color: lightblue;
+  justify-content: space-around;
+  position: relative;
+  color: beige;
   border: 2px outset bisque;
   border-radius: 5cap;
-  background-color: rgb(200, 140, 75);
+  background: linear-gradient(315deg, #574619, #bd8216);
   margin-bottom: 20px;
-  gap: 10px;
+  gap: 5px;
   @media (width >= calc(600/16*1rem)) {
     gap: 25px;
   }
 }
-.galery__img {
-  padding-top: 10px;
+.galery__head {
+  position: absolute;
+  border-bottom: 3px solid beige;
+}
+.galery__images {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.galery__images img {
+  margin-top: 14px;
+  border-radius: 5cap;
+}
+.galery__images strong {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+.galery__images a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: aliceblue;
+  opacity: 70%;
+  padding: 20px;
+  border: 2px groove lightgray;
+  border-radius: 10px;
+  font-size: var(--font-size-btn);
+  &:hover {
+    opacity: 100%;
+  }
+}
+.events {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+.events__head {
+  position: absolute;
+  border: 2px outset bisque;
+  border-radius: 5cap;
+  background: linear-gradient(315deg, #574619, #bd8216);
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.events__content {
+  color: beige;
+  display: flex;
+  margin-top: 130px;
+  gap: 5px;
+  @media (width >= calc(600/16*1rem)) {
+    gap: 15px;
+  }
+}
+.event {
+  display: flex;
+  flex-flow: column;
+  width: 33%;
+  gap: 10px;
+  background: linear-gradient(315deg, #574619, #bd8216);
+  border-radius: 5px;
+  padding: 15px;
+}
+.event a {
+  width: 38%;
+  text-align: center;
+  background-color: aliceblue;
+  opacity: 70%;
+  padding: 5px;
+  border: 2px groove lightgray;
+  border-radius: 10px;
+  font-size: var(--font-size-btn);
+  &:hover {
+    opacity: 100%;
+  }
 }
