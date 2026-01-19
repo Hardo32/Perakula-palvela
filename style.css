@@ -159,6 +159,9 @@ svg {
     text-decoration-thickness: 3px;
   }
 }
+.topnav__item a.active {
+  border: 1px dashed lightgray;
+}
 .mainImg {
   display: flex;
   padding: 20px;
@@ -314,10 +317,13 @@ svg {
 .event a {
   background-color: aliceblue;
   opacity: 70%;
-  padding: 7px;
+  padding: 1px;
   width: 50%;
   border: 2px groove lightgray;
   border-radius: 10px;
+  @media (width >= calc(600/16*1rem)) {
+    padding: 7px;
+  }
   font-size: var(--font-size-btn-small);
   &:hover {
     opacity: 100%;
@@ -345,6 +351,8 @@ svg {
 }
 .f__nav a {
   color: white;
+  font-size: var(--font-size-topnav);
+  font-weight: 700;
   background-color: transparent;
   &:hover {
     background-color: #7e6111;
