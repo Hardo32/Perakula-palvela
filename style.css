@@ -23,6 +23,7 @@
   --fs-20: calc(20 / 16 * 1rem);
   --fs-24: calc(24 / 16 * 1rem);
   --fs-26: calc(26 / 16 * 1rem);
+  --fs-28: calc(28 / 16 * 1rem);
   --fs-42: calc(42 / 16 * 1rem);
   --fs-48: calc(48 / 16 * 1rem);
   --fs-72: calc(72 / 16 * 1rem);
@@ -34,7 +35,7 @@
   --font-size-small: var(--fs-12);
   --font-size-h1: var(--fs-42);
   --font-size-h2: var(--fs-26);
-  --font-size-h3: var(--fs-20);
+  --font-size-h3: var(--fs-18);
 
   /*suuremal seadmel- arvuti, tablet, mille laius ületab 600px,teksti suurus teine-suurem*/
   @media (width >= calc(600/16*1rem)) {
@@ -44,6 +45,7 @@
     --font-size-btn: var(--fs-24);
     --font-size-h1: var(--fs-72);
     --font-size-h2: var(--fs-48);
+    --font-size-h3: var(--fs-28);
   }
 }
 /*Style layout rules*/
@@ -60,7 +62,7 @@
 body {
   font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
   line-height: 1.3;
-  background-color: rgb(130, 70, 60);
+  /* background-color: rgb(130, 70, 60); */
 }
 
 h1,
@@ -79,7 +81,8 @@ h2 {
   text-align: center;
 }
 h3 {
-  /* font-size: var(--font-size-h3); */
+  color: beige;
+  font-size: var(--font-size-h3);
   text-align: center;
 }
 p,
@@ -152,7 +155,7 @@ svg {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--c-white);
+  color: white;
   &:hover {
     text-decoration: underline;
     text-underline-offset: 7px;
@@ -357,4 +360,121 @@ svg {
   &:hover {
     background-color: #7e6111;
   }
+}
+/* *****************************************************
+                   Kontakt
+*****************************************************   */
+.kontakt__maintext {
+  color: antiquewhite;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 50px;
+  p {
+    margin-top: 30px;
+  }
+}
+.kontaktid {
+  border: 2px solid darkgoldenrod;
+  display: flex;
+}
+.kontaktandmed {
+  flex: 1;
+  background-color: #914d26;
+  border: 2px solid darkgoldenrod;
+  color: white;
+  ul {
+    height: 423px;
+    margin-top: 60px;
+    text-align: left;
+    list-style-type: none;
+  }
+}
+.kontakt__rida {
+  line-height: 2;
+}
+.mailbox {
+  flex: 1;
+  padding: 10px;
+  opacity: 10%;
+}
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  resize: vertical;
+}
+input[type="submit"] {
+  background-color: aliceblue;
+  color: #551a8b;
+  padding: 10px 10px;
+  border: 2px groove lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+textarea {
+  height: 160px;
+}
+/* *****************************************************
+                   Akende restaureerimine
+*****************************************************   */
+.aknad__pealkiri {
+  border-bottom: 6px groove goldenrod;
+  padding: 20px;
+}
+.ajahammas {
+  padding: 20px;
+  background-color: #914d26;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 2px solid goldenrod;
+  h3 {
+    flex: 1;
+    padding: 20px;
+  }
+  img {
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid goldenrod;
+    width: 50%;
+  }
+}
+.kursus {
+  padding: 20px;
+  h3 {
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 20px;
+  }
+}
+.kursus__list {
+  padding: 20px;
+  background-color: #914d26;
+  border-bottom: 2px solid goldenrod;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  li {
+    list-style-type: none;
+  }
+}
+.uusaken {
+  padding: 20px;
+  h3 {
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 30px;
+  }
+}
+.uuedaknapildid {
+  background-color: #914d26;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }

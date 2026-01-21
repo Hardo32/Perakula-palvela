@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body style="background-color: rgb(161, 89, 46)">
     <header>
       <div class="topnav__logos">
         <img
@@ -46,7 +46,53 @@
     </header>
 
     <div class="wrapper">
-      <h2>Kontakt</h2>
+      <div class="kontakt__maintext">
+        <h2>Kontakt</h2>
+        <h2>Võta meiega ühendust!</h2>
+        <p>
+          Aitäh, et külastate meie veebisaiti! Kui teil on küsimusi, kommentaare
+          või soovitusi, siis palun ärge kartke meile kirjutada.
+        </p>
+      </div>
+      <div class="kontaktid">
+        <div class="kontaktandmed">
+          <ul>
+            <li class="kontakt__rida">MTÜ Peraküla Palvela</li>
+            <li class="kontakt__rida">
+              Peraküla küla, Lääne-Nigula vald, 91114, Läänemaa
+            </li>
+            <li class="kontakt__rida">Registrikood : xxxxxxxx</li>
+            <li class="kontakt__rida">Silja Silver</li>
+            <li class="kontakt__rida">tel: 372 56214381</li>
+            <li class="kontakt__rida">epost: siljasilver@hot.ee</li>
+          </ul>
+        </div>
+        <div class="mailbox">
+          <form action="#">
+            <label for="fname">Nimi: </label>
+            <input
+              type="text"
+              id="fname"
+              name="fullname"
+              placeholder="Sisesta oma nimi siia..."
+            />
+            <label for="lemail">Email Aadress: </label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Sisesta oma email.."
+            />
+            <label for="message">Sõnum: </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Sisesta oma sõnum..."
+            ></textarea>
+            <input type="submit" value="Kinnita" />
+          </form>
+        </div>
+      </div>
     </div>
 
     <footer>
