@@ -506,3 +506,34 @@ textarea {
     list-style-type: none;
   }
 }
+/* *****************************************************
+                   Ajalugu
+*****************************************************   */
+.ajalugu__pealkiri {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 6px groove goldenrod;
+  padding: 20px;
+  h2 {
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+  img {
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+  }
+}
+.ajalugu_box {
+  color: #e4dbdb;
+  padding: 10px;
+  background-color: rgb(131, 84, 59);
+  border-left: 4px dotted goldenrod;
+  border-right: 4px dotted goldenrod;
+}
+.ajalugu__paragraph {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+}
