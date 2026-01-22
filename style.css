@@ -478,3 +478,31 @@ textarea {
   flex-flow: column;
   align-items: center;
 }
+/* *****************************************************
+                   Galerii pildid
+*****************************************************   */
+.galerii__pealkiri {
+  border-bottom: 6px groove goldenrod;
+  padding: 20px;
+}
+.galerii__box {
+  padding: 20px;
+  h3 {
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 20px;
+  }
+}
+.galerii__list {
+  padding: 20px;
+  background-color: #914d26;
+  border-bottom: 2px solid goldenrod;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  li {
+    list-style-type: none;
+  }
+}
