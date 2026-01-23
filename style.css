@@ -537,3 +537,31 @@ textarea {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 15px;
 }
+/* *****************************************************
+                   Meist. Kes me oleme
+*****************************************************   */
+.meist__pealkiri {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 6px groove goldenrod;
+  padding: 20px;
+  h2 {
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+.meie {
+  color: #f0e6e6;
+  padding: 10px;
+  background-color: rgb(131, 84, 59);
+  border-left: 4px dotted goldenrod;
+  border-right: 4px dotted goldenrod;
+}
+.meie__paragraph {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 50px;
+  h3 {
+    margin-bottom: 20px;
+  }
+}
