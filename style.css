@@ -99,6 +99,15 @@ svg {
   height: auto;
   display: block; /*parem paigutus*/
 }
+.temporary__fog {
+  opacity: 0.3;
+  a {
+    visibility: collapse;
+  }
+  .mail__kinnita {
+    visibility: collapse;
+  }
+}
 
 .wrapper {
   width: min(
@@ -107,6 +116,7 @@ svg {
   ); /*venitamisel 327px Mobile width ja 1200px-maximum PC width*/
   margin-inline: auto; /*tsentreerib, nii et mõlemalt poolt ühesugune kaugus max laiuseni */
 }
+
 .topnav {
   color: white;
   display: flex;
@@ -376,6 +386,10 @@ svg {
 .kontaktid {
   border: 2px solid darkgoldenrod;
   display: flex;
+  flex-flow: column;
+  @media (width >= calc(600/16*1rem)) {
+    flex-flow: row;
+  }
 }
 .kontaktandmed {
   flex: 1;
@@ -390,15 +404,14 @@ svg {
   }
 }
 .kontakt__rida {
-  line-height: 1.8;
+  line-height: 1.6;
 }
 .kontakt__rida__arveldus {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .mailbox {
   flex: 1;
   padding: 10px;
-  opacity: 10%;
 }
 input[type="text"],
 textarea,
@@ -411,7 +424,7 @@ select {
   margin-bottom: 12px;
   resize: vertical;
 }
-input[type="submit"] {
+.mail__kinnita[type="submit"] {
   background-color: aliceblue;
   color: #551a8b;
   padding: 10px 10px;
@@ -583,5 +596,35 @@ textarea {
   margin-bottom: 50px;
   h3 {
     margin-bottom: 20px;
+  }
+}
+/* *****************************************************
+                   Mõõdunud üritused
+*****************************************************   */
+.pastevents__pealkiri {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 6px groove goldenrod;
+  padding: 20px;
+  h2 {
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+.pastevents {
+  color: #e4dbdb;
+  padding: 10px;
+  background-color: rgb(131, 84, 59);
+  border-left: 4px dotted goldenrod;
+  border-right: 4px dotted goldenrod;
+}
+.pastevents__paragraph {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed goldenrod;
   }
 }
