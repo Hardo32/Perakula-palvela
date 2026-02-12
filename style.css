@@ -556,11 +556,17 @@ textarea {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-    margin-bottom: 30px;
+  }
+  h3 {
+    padding-top: 30px;
+  }
+  .comment {
+    font-size: var(--font-size-topnav);
+    line-height: 0.5;
   }
 }
 .ajalugu_box {
-  color: #e4dbdb;
+  color: rgb(245, 245, 209);
   padding: 10px;
   background-color: rgb(131, 84, 59);
   border-left: 4px dotted goldenrod;
@@ -569,6 +575,14 @@ textarea {
 .ajalugu__paragraph {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 15px;
+  padding: 15px 5px;
+  strong {
+    font-size: var(--font-size-btn);
+    color: rgb(239, 243, 190);
+  }
+  .ital {
+    font-style: italic;
+  }
 }
 /* *****************************************************
                    Meist. Kes me oleme
