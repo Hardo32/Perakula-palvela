@@ -539,6 +539,22 @@ textarea {
     list-style-type: none;
   }
 }
+.galImg {
+  width: 300px;
+  height: 300px;
+}
+.gallImgFullSize {
+  border: 7px solid rgb(116, 93, 36);
+  z-index: 999;
+  cursor: zoom-out;
+  display: block;
+  width: 700px;
+  max-width: 700px;
+  height: 550px;
+  position: fixed;
+  left: 100px;
+  top: 70px;
+}
 /* *****************************************************
                    Ajalugu
 *****************************************************   */
@@ -634,6 +650,36 @@ textarea {
   border-right: 4px dotted goldenrod;
 }
 .pastevents__paragraph {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+  p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed goldenrod;
+  }
+}
+/* *****************************************************
+                   Tulevad üritused
+*****************************************************   */
+.futureEvents__pealkiri {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 6px groove goldenrod;
+  padding: 20px;
+  h2 {
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+.futureEvents {
+  color: #e4dbdb;
+  padding: 10px;
+  background-color: rgb(131, 84, 59);
+  border-left: 4px dotted goldenrod;
+  border-right: 4px dotted goldenrod;
+}
+.futureEvents__paragraph {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 25px;
   p {
