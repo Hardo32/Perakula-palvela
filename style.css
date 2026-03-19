@@ -1,20 +1,3 @@
-/* new Font- style. source-sans-3-regular - latin. Tõmmata file google-webfonts-helper.(regular,700)*/
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Source Sans 3";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/source-sans-3-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* source-sans-3-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Source Sans 3";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/source-sans-3-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/*Fonts sizes - fs*/
 :root {
   --fs-10: calc(10 / 16 * 1rem);
   --fs-12: calc(12 / 16 * 1rem);
@@ -60,7 +43,7 @@
 
 /*Selectors Global styles*/
 body {
-  font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.3;
   /* background-color: rgb(130, 70, 60); */
 }
@@ -534,27 +517,33 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-
-  li {
-    list-style-type: none;
-  }
+}
+.gPilt {
+  list-style-type: none;
+  width: 300px;
+  height: 250px;
+  cursor: pointer;
+  position: relative;
+}
+.gPilt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 150ms ease-in-out;
+}
+.gPilt:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .galImg {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.gallImgFullSize {
-  border: 7px solid rgb(116, 93, 36);
-  z-index: 999;
-  cursor: zoom-out;
-  display: block;
-  width: 700px;
-  max-width: 700px;
-  height: 550px;
-  position: fixed;
-  left: 100px;
-  top: 70px;
-}
+
 /* *****************************************************
                    Ajalugu
 *****************************************************   */
@@ -658,6 +647,40 @@ textarea {
     border-bottom: 1px dashed goldenrod;
   }
 }
+.pastEventImages {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.pastEventImgCont {
+  height: 200px;
+  width: 300px;
+  list-style-type: none;
+  cursor: pointer;
+  position: relative;
+}
+.pastEventImgCont::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 150ms ease-in-out;
+}
+.pastEventImgCont:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.pastEventImgCont img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* *****************************************************
                    Tulevad üritused
 *****************************************************   */
@@ -687,4 +710,18 @@ textarea {
     margin-bottom: 15px;
     border-bottom: 1px dashed goldenrod;
   }
+}
+
+.imgFullSize {
+  border: 7px solid rgb(116, 93, 36);
+  z-index: 999;
+  cursor: zoom-out;
+  display: block;
+  width: 800px;
+  max-width: 800px;
+  height: 550px;
+  max-height: 550px;
+  position: fixed;
+  left: 20px;
+  top: 70px;
 }
