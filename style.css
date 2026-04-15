@@ -1,3 +1,6 @@
+/* *****************************************************
+                   globaalsed muutujad
+*****************************************************   */
 :root {
   --fs-10: calc(10 / 16 * 1rem);
   --fs-12: calc(12 / 16 * 1rem);
@@ -31,7 +34,9 @@
     --font-size-h3: var(--fs-28);
   }
 }
-/*Style layout rules*/
+/* *****************************************************
+                   Algne seadistus
+*****************************************************   */
 *,
 *::before,
 *::after {
@@ -82,6 +87,9 @@ svg {
   height: auto;
   display: block; /*parem paigutus*/
 }
+/* *****************************************************
+                   Pooleli oleva paneeli varjutus
+*****************************************************   */
 .temporary__fog {
   opacity: 0.3;
   a {
@@ -91,7 +99,9 @@ svg {
     visibility: collapse;
   }
 }
-
+/* *****************************************************
+                   Avaleht + üld Wrapper
+*****************************************************   */
 .wrapper {
   width: min(
     calc(100% - 39px),
@@ -417,6 +427,14 @@ select {
 }
 textarea {
   height: 160px;
+}
+.kaartCont {
+  padding: 10px;
+  border: 2px solid darkgoldenrod;
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.15) inset;
+}
+.kaartCont iframe {
+  width: 100%;
 }
 /* *****************************************************
                    Akende restaureerimine
@@ -744,8 +762,16 @@ textarea {
     margin-bottom: 15px;
     border-bottom: 1px dashed goldenrod;
   }
+  h3 {
+    margin-bottom: 15px;
+  }
+  .anchor {
+    margin-left: 10px;
+  }
 }
-
+/* *****************************************************
+                   Lisa Stiilid
+*****************************************************   */
 .imgFullSize {
   border: 7px solid rgb(116, 93, 36);
   z-index: 999;
