@@ -131,16 +131,11 @@ svg {
   flex-flow: column;
   align-items: center;
 }
-.topnav__logo {
-  width: calc(10 / 16 * 1rem);
-  @media (width >= calc(600/16*1rem)) {
-    width: calc(30 / 16 * 1rem);
-  }
-}
+
 .topnav__logo2 {
-  width: calc(40 / 16 * 1rem);
+  width: calc(50 / 16 * 1rem);
   @media (width >= calc(600/16*1rem)) {
-    width: calc(125 / 16 * 1rem);
+    width: calc(150 / 16 * 1rem);
   }
 }
 .topnav__links {
@@ -399,9 +394,7 @@ svg {
 .kontakt__rida {
   line-height: 1.6;
 }
-.kontakt__rida__arveldus {
-  margin-top: 20px;
-}
+
 .mailbox {
   flex: 1;
   padding: 10px;
@@ -572,19 +565,11 @@ textarea {
 .gPilt:hover::before {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.galImg {
+/* .galImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-#signature8 {
-  background-color: #914d26;
-  padding-bottom: 6px;
-  color: beige;
-  top: 10px;
-  left: 10px;
-  opacity: 0;
-}
+} */
 
 /* *****************************************************
                    Ajalugu
@@ -624,12 +609,16 @@ textarea {
   margin-bottom: 15px;
   padding: 15px 5px;
   strong {
-    font-size: var(--font-size-btn);
+    font-size: var(--font-size-btn-small);
     color: rgb(239, 243, 190);
   }
   .ital {
     font-style: italic;
   }
+}
+.ajaluguImgCont {
+  max-width: 300px;
+  padding: 10px;
 }
 /* *****************************************************
                    Meist. Kes me oleme
@@ -694,12 +683,7 @@ textarea {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.right-side {
-  display: flex;
-  justify-self: end;
-  margin-right: 10px;
-}
-.pastEventImages {
+.pastEventImagesMain {
   margin-top: 15px;
   display: flex;
   flex-direction: row;
@@ -710,7 +694,6 @@ textarea {
 .pastEventImgCont {
   height: 200px;
   width: 300px;
-  list-style-type: none;
   cursor: pointer;
   position: relative;
 }
@@ -767,6 +750,10 @@ textarea {
   }
   .anchor {
     margin-left: 10px;
+  }
+  .anchor > a > img {
+    display: inline-flex;
+    max-height: 80px;
   }
 }
 /* *****************************************************

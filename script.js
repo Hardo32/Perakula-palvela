@@ -1,7 +1,7 @@
 const galeryImages = document.querySelectorAll(".galerii__list > li");
 let galeryclicking = false;
 
-const pastEventImages = document.querySelectorAll(".pastEventImages > li");
+const pastEventImages = document.querySelectorAll(".pastEventImgCont");
 let pastEventclicking = false;
 
 const kursusImages = document.querySelectorAll(".kursus__list > li");
