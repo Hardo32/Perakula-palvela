@@ -4,6 +4,9 @@ let galeryclicking = false;
 const pastEventImages = document.querySelectorAll(".pastEventImgCont");
 let pastEventclicking = false;
 
+const sisepiltImages = document.querySelectorAll(".sisepiltImgCont");
+let sisepiltClicking = false;
+
 const kursusImages = document.querySelectorAll(".kursus__list > li");
 let kursusclicking = false;
 
@@ -32,6 +35,20 @@ pastEventImages.forEach((im) => {
     });
     pastEventclicking = !pastEventclicking;
     if (pastEventclicking) {
+      e.target.classList.add("imgFullSize");
+    } else {
+      e.target.classList.remove("imgFullSize");
+    }
+  });
+});
+
+sisepiltImages.forEach((im) => {
+  im.addEventListener("click", function (e) {
+    sisepiltImages.forEach((img) => {
+      img.classList.remove("imgFullSize");
+    });
+    sisepiltClicking = !sisepiltClicking;
+    if (sisepiltClicking) {
       e.target.classList.add("imgFullSize");
     } else {
       e.target.classList.remove("imgFullSize");
