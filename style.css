@@ -165,6 +165,8 @@ svg {
 }
 .mainImg {
   display: flex;
+  margin: 0 auto;
+  width: 70%;
   padding: 20px;
   justify-content: center;
   align-items: end;
